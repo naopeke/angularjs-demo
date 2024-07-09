@@ -11,31 +11,11 @@
 
 
     <div ng-controller="MyController">
-        <div ng-repeat="employee in employees">
-            <p>Firstname is {{employee.fname | uppercase}}</p>
-            <p>Firstname is {{employee.fname | limitTo:3}}</p>
-            <p>Firstname is {{employee.fname | uppercase | limitTo:3}}</p>
+        <button ng-click="count=count+1; toggleshow()">Click</button>
+        <p ng-show="show">Count is {{count}}</p>
+        <!-- <p ng-hide="show">Count is {{count}}</p> -->
 
-            <p>Lastname is {{employee.lname | lowercase}}</p>
-            <p>Salary is {{employee.salary | currency}}</p>
-        </div>
-
-    <hr>
-        
-    <div ng-repeat="employee in employees | limitTo:2">
-            <p>Firstname is {{employee.fname | uppercase}}</p>
-            <p>Lastname is {{employee.lname | lowercase}}</p>
-            <p>Salary is {{employee.salary | currency}}</p>
     </div>
-
-    <hr>
-    
-    <div ng-repeat="employee in employees | orderBy:'salary'">
-        <p>Firstname is {{employee.fname | uppercase}}</p>
-        <p>Lastname is {{employee.lname | lowercase}}</p>
-        <p>Salary is {{employee.salary | currency}}</p>
-    </div>
-</div>
 
 </div>
 

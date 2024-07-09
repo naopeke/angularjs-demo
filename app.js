@@ -1,21 +1,9 @@
 var app = angular.module('myApp', []);
 
 app.controller('MyController', ['$scope', function($scope){
-    $scope.employees = [
-        {
-            fname: 'Nao',
-            lname: 'Mukai',
-            salary: 20000
-        },
-        {
-            fname: 'John',
-            lname: 'Doe',
-            salary: 50000
-        },
-        {
-            fname: 'Jane',
-            lname: 'Doen',
-            salary: 40000
-        },
-    ];
+    $scope.count = 0;
+    $scope.show = true;
+    $scope.toggleshow = function(){
+        $scope.show = !$scope.show;
+    };
 }])
