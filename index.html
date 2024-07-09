@@ -9,11 +9,12 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
 
-    <div ng-init="name='Nao Mukai'">
-        {{name}}
-    </div>
+
     <div ng-controller="MyController">
-        {{name}} {{age}}
+        <p ng-hide="isSpy">Firstname is {{firstname}}</p>
+        <p ng-hide="isSpy">Lastname is {{lastname}}</p>
+        <p ng-hide="isSpy">Fullname is {{fullname()}}</p>
+        <p ng-show="isSpy">Codename is {{codename}}</p>
     </div>
 </body>
 </html>

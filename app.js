@@ -1,6 +1,11 @@
 var app = angular.module('myApp', []);
 
 app.controller('MyController', ['$scope', function($scope){
-    $scope.name = 'Jane Doe';
-    $scope.age = 28;
+    $scope.firstname = 'Nao';
+    $scope.lastname = 'Mukai';
+    $scope.fullname = function(){
+        return $scope.firstname + " " + $scope.lastname
+    };
+    $scope.isSpy = true;
+    $scope.codename = 'Naopeke'
 }])
