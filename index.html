@@ -11,10 +11,33 @@
 
 
     <div ng-controller="MyController">
-        <p ng-hide="isSpy">Firstname is {{firstname}}</p>
-        <p ng-hide="isSpy">Lastname is {{lastname}}</p>
-        <p ng-hide="isSpy">Fullname is {{fullname()}}</p>
-        <p ng-show="isSpy">Codename is {{codename}}</p>
+        <div ng-repeat="employee in employees">
+            <p>Firstname is {{employee.fname | uppercase}}</p>
+            <p>Firstname is {{employee.fname | limitTo:3}}</p>
+            <p>Firstname is {{employee.fname | uppercase | limitTo:3}}</p>
+
+            <p>Lastname is {{employee.lname | lowercase}}</p>
+            <p>Salary is {{employee.salary | currency}}</p>
+        </div>
+
+    <hr>
+        
+    <div ng-repeat="employee in employees | limitTo:2">
+            <p>Firstname is {{employee.fname | uppercase}}</p>
+            <p>Lastname is {{employee.lname | lowercase}}</p>
+            <p>Salary is {{employee.salary | currency}}</p>
     </div>
+
+    <hr>
+    
+    <div ng-repeat="employee in employees | orderBy:'salary'">
+        <p>Firstname is {{employee.fname | uppercase}}</p>
+        <p>Lastname is {{employee.lname | lowercase}}</p>
+        <p>Salary is {{employee.salary | currency}}</p>
+    </div>
+</div>
+
+</div>
+
 </body>
 </html>
