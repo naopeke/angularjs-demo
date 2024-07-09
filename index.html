@@ -19,15 +19,15 @@
         </div>
        </div>
 
-       <form action="" name="reviewForm">
+       <form name="reviewForm" ng-submit="addReview()">
         <p>{{form.comment}}</p><br>
-        <p>{{form.author}}</p><br>
+        <p>{{form.by}}</p><br>
 
-        <label for="">Comment</label><br>
-        <textarea ng-model="form.comment" name="" id=""></textarea><br>
-        <label for="">Author</label><br>
-        <input ng-model="form.author" type="text"/>
-
+        <label>Comment</label><br>
+        <textarea ng-model="form.comment" name="comment" id="comment"></textarea><br>
+        <label>Author</label><br>
+        <input ng-model="form.by" type="email"><br>
+        <input type="submit" value="Add Review">
        </form>
     </div>
 
