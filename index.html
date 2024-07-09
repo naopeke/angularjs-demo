@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body ng-app>
+<body ng-app="myApp" ng-init="a=5; b=6; fname='Nao'; lname='Mukai'; even=[2, 4, 6, 8]">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-    {{ "Hello" + " World"}}
+    <script type="text/javascript" src="app.js"></script>
+    <p>This area is {{a*b}}</p>
+    <p>This area is <span ng-bind="a*b"></span></p>
+    <p>Fullname is {{fname + " " + lname}}</p>
+    <p>Fullname is <span ng-bind="fname + ' ' + lname"></span></p>
+    <p>{{even[2]}}</p>
+    <p><span ng-bind="even[1]"></span></p>
 </body>
 </html>
