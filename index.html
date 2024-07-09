@@ -11,10 +11,24 @@
 
 
     <div ng-controller="MyController">
-        <button ng-click="count=count+1; toggleshow()">Click</button>
-        <p ng-show="show">Count is {{count}}</p>
-        <!-- <p ng-hide="show">Count is {{count}}</p> -->
+       <h2>Reviews</h2>
+       <div ng-repeat="review in reviews">
+        <div style="background-color: #EEEEEE">
+            <p>{{review.comment}}</p>
+            <p><b>{{review.by}}</b></p>
+        </div>
+       </div>
 
+       <form action="" name="reviewForm">
+        <p>{{form.comment}}</p><br>
+        <p>{{form.author}}</p><br>
+
+        <label for="">Comment</label><br>
+        <textarea ng-model="form.comment" name="" id=""></textarea><br>
+        <label for="">Author</label><br>
+        <input ng-model="form.author" type="text"/>
+
+       </form>
     </div>
 
 </div>
