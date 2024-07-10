@@ -22,4 +22,20 @@ app.controller('MyController', ['$scope', function($scope){
         by: 'John@example.com'
     },
    ]
-}])
+}]);
+
+//これを追加すると、index.htmlは<userinformation></userinformation>が可能になる
+app.directive('userinformation', function(){
+    return {
+        restrict: 'E',
+        templateUrl: 'userinfo.html'
+    };
+})
+
+app.directive('userinformation', function(){
+    return {
+        restrict: 'A', // attributeの場合は、<div userinformation></div>
+        templateUrl: 'userinfo.html'
+    };
+})
+
